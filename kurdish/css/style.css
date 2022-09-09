@@ -6,6 +6,7 @@
   --primary-color:#212121;
   --secondary-color:#fff;  
 --actor-color:rgba(0, 0, 0, 0.358); 
+  --actor-colorr:rgba(0, 0, 0, 0.358); 
 --actor-shadow:black;
 --dis-color:rgba(2, 2, 2, 0.459);
 --aboutt:#d66262; 
@@ -18,6 +19,7 @@
   --primary-color:#edf2f2;
   --secondary-color:#212121;  
 --actor-color:#292a2a;  
+  --actor-colorr:#edf2f2;  
 --actor-shadow:rgb(59, 59, 59);
 --dis-color:#edf2f2;
 --aboutt:#BF2929;
@@ -641,7 +643,7 @@ height: 12px;
 }
   .main h2 
   {
-   text-transform: capitalize; color: var(--actor-color); font-weight: 600;
+   text-transform: capitalize; color: var(--actor-colorr); font-weight: 600;
   }
   .pro 
   { 
