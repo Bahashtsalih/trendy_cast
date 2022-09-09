@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="./vendor/icofont/icofont.min.css" rel="stylesheet">
+           <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+           <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+           <meta name="viewport" content="width=device-width, initial-scale=1"> 
+           <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <div class="wrapper" > 
+        <div class="login-content"> 
+            <form action="index.php">
+              <img src="./img/user (3).png" width="10px" alt=""  >
+                <h2 class="title">بەخێربێیت</h2>
+                <br>
+                   <div class="input-div one">
+                      <div class="i">
+                              <i class="fas fa-user"></i>
+                      </div>
+                      <div class="div">
+                              <h5>ناوی بەکارهێنەر</h5>
+                              <input type="text" required class="input" >
+                      </div>
+                   </div>
+                   <div class="input-div pass">
+                      <div class="i"> 
+                           <i class="fas fa-lock"></i>
+                      </div>
+                      <div class="div">
+                           <h5>ووشەی نهێنی</h5>
+                           <input type="password"required class="input" >
+                   </div>
+                </div>
+          <br>
+
+                <input type="submit" class="btn" value="چوونەژورەوە"onclick="location.href='./home.html';">
+                <p class="s">یان داخیلبون لە ڕێگای </p>
+                <p class="social">
+                    <a href="https://www.facebook.com/" target="_blank"><span class="icofont-facebook"></span></a> &nbsp;
+                    <a href="https://www.instagram.com/?hl=en" target="_blank"><span class="icofont-instagram"></span></a>&nbsp;
+           
+                    </p>
+            </form> 
+        
+
+        </div>
+    </div> 
+<style>
+   :root 
+  {
+  --content:url("./img/moon.png");
+
+  }
+  .dark 
+  {
+  --content:url("./img/sun.png");
+
+  }
+
+      #chngmode
+      {
+        
+        content:var(--content);
+      }
+      </style>
+       <select class="btn1" onchange="location = this.value;" style="position:absolute;top:15px; right:70px"> 
+        <option value="../index.html" >english</option> 
+          <option value="../kurdish/login.html" selected>kurdish</option> 
+       </select> 
+    <img id="chngmode"  width="10"class="fass"  alt=""> 
+    <script > 
+        const inputs = document.querySelectorAll(".input");
+       function addcl(){
+       let parent = this.parentNode.parentNode;
+       parent.classList.add("focus");
+       }
+       
+       function remcl(){
+           let parent = this.parentNode.parentNode;
+           if(this.value == ""){
+               parent.classList.remove("focus");
+           }
+       }
+       inputs.forEach(input => {
+           input.addEventListener("focus", addcl);
+           input.addEventListener("blur", remcl);
+       }); 
+       </script>
+    <script>
+        const darkBtn = document.querySelector('.fass');
+const bodyEl = document.querySelector('body');
+
+const darkMode = () => {
+    bodyEl.classList.toggle('dark')
+}
+
+darkBtn.addEventListener('click', () => {
+    // Get the value of the "dark" item from the local storage on every click
+    setDarkMode = localStorage.getItem('dark');
+
+    if(setDarkMode !== "on") { 
+        
+        darkMode();
+        // Set the value of the itwm to "on" when dark mode is on
+        setDarkMode = localStorage.setItem('dark', 'on');
+    } else {
+        darkMode();
+        // Set the value of the item to  "null" when dark mode if off
+        setDarkMode = localStorage.setItem('dark', null);
+    }
+});
+
+// Get the value of the "dark" item from the local storage
+let setDarkMode = localStorage.getItem('dark');
+
+// Check dark mode is on or off on page reload
+if(setDarkMode === 'on') {
+    darkMode();
+}
+    </script>
+</body>
+</html>
