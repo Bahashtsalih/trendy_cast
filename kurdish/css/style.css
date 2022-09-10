@@ -52,6 +52,7 @@ html {
 body 
 {
   background-color: var(--secondary-color); 
+    transition: 0.5s ease-in-out;
   direction: rtl;
 }
 .d
